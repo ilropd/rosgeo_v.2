@@ -27,7 +27,7 @@ if uploaded_file is not None:
         def get_x_data(dataframe, columns=cols):
             get_x = dataframe[columns].values.astype(np.float32)
             print(f'Размер: {get_x.shape}')
-            return get_x_data
+            return get_x
 
         data_for_predict = get_x_data(df)
 else:
