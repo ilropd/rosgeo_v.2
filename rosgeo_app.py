@@ -1,5 +1,5 @@
 import streamlit as st
-from keras.models import Sequential, load_model, model_from_json
+from keras.models import model_from_json
 
 import pandas as pd
 import numpy as np
@@ -23,9 +23,9 @@ if uploaded_file is not None:
                 df.pop(col)
         df = df.reindex(columns=cols)
 
-        def get_x_data(df, columns=cols):
-            get_x_data = df[columns].values.astype(np.float32)
-            print(f'Размер: {get_x_data.shape}')
+        def get_x_data(dataframe, columns=cols):
+            get_x = dataframe[columns].values.astype(np.float32)
+            print(f'Размер: {get_x.shape}')
             return get_x_data
 
         data_for_predict = get_x_data(df)
