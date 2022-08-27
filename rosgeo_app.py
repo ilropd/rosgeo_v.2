@@ -14,7 +14,7 @@ cols = ['GGKP_korr', 'GK_korr', 'PE_korr', 'DS_korr', 'DTP_korr', 'Wi_korr', 'BK
 if uploaded_file is not None:
         st.write('*Файл загружен успешно*')
 
-        df = pd.read_excel(uploaded_file, header=1)
+        df = pd.read_excel(uploaded_file, engine="openpyxl", header=1)
 
         df = df.dropna(axis='index', how='any')
         df = df.drop([0])
