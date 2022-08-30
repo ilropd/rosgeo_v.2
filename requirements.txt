@@ -5,6 +5,7 @@ numpy==1.21.6
 openpyxl==3.0.10
 pandas==1.1.5
 pandas-utility==0.1.4
+pickle
 pkgutil-resolve-name==1.3.10
 scikit-learn==1.0.2
 sklearn==0.0

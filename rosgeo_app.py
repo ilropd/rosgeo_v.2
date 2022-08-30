@@ -104,8 +104,11 @@ else:
 # print('Loaded model from disk')
 
 
-loaded_model_collectors = pickle.load(open('venv/Models/COLLECTORS/drivemodel_RF_Collectors_model.sav', 'rb'))
+# loaded_model_collectors = pickle.load(open('venv/Models/COLLECTORS/drivemodel_RF_Collectors_model.sav', 'rb'))
 
+
+with open('venv/Models/COLLECTORS/model_RF_Collectors_model.pkl', 'rb') as file:
+ loaded_model_collectors = pickle.load(file)
 
 json_file_KNEF = open('venv/Models/KNEF/model_ilro_KNEF_model.json', 'r')
 loaded_model_json_KNEF = json_file_KNEF.read()
